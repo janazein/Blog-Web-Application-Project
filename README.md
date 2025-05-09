@@ -1,5 +1,5 @@
 # Blog-Web-Application
-A Blog web application using Node.js, Express.js, and EJS. The application will allow users to create and view blog posts. Posts will not persist between sessions as no database will be used in this version of the application. 
+A Blog web application using Node.js, Express.js, and EJS. The application allows users to create and view blog posts. Posts don't persist between sessions as no database is used in this version of the application. 
 
 # Features
 1. Post Creation: Users are able to create new posts.
