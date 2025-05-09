@@ -10,3 +10,18 @@ A Blog web application using Node.js, Express.js, and EJS. The application allow
 # Technical Requirements
 1. Node.js & Express.js.
 2. EJS.
+
+Home Page 
+![home-page1](https://github.com/user-attachments/assets/782e8fe5-e27c-4558-b9fc-6ed65ca175e9)
+
+![home-page2](https://github.com/user-attachments/assets/b832f6b6-dff1-4f6c-8800-d8e178570dab)
+
+Create Post 
+![create-post](https://github.com/user-attachments/assets/13dc8d24-901d-40bd-9dd3-f7f04379619b)
+
+Edit Post 
+![edit-post](https://github.com/user-attachments/assets/990e0013-9be9-413e-9db7-c65ede894156)
+
+View Post
+![view-post](https://github.com/user-attachments/assets/96f13897-006f-41a2-b0e8-721785a76f64)
+
