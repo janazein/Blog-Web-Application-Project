@@ -1,0 +1,88 @@
+<%- include("partials/header.ejs")%>
+    <div class="container">
+
+      <div class="container1">
+        <div class="section1">
+          <h2>Blog with us</h2>
+      </div>
+    </div>
+
+      <div class="section1">
+       <p>Discover articles, tutorials and personal thoughts on web development, design, and everything in between. Stay curious, keep learning and enjoy the journey through code and creativity, while writing your own blogs and sharing your thoughts and experiences.</p>
+       <a href="/compose"><button type="submit" class="btn">Create A Blog</button></a>
+     </div>
+     
+     
+    <br>
+    <br>
+
+    <div class="container1">
+        <div class="section1">
+          <h2>Features</h2>
+      </div>
+    </div>
+
+      <div class="container1">
+       <div class="section">
+        <div>
+         <img src="/images/create.png" width="200" height="100" alt="create" />
+        </div>
+       <div>
+          <h4>Create Posts</h4>
+          <p>As an authenticated user, you can easily write and publish new blog posts. Just fill in the title and content, then publish your article will instantly appear on the home page.</p>
+       </div>
+      </div>
+   </div>
+
+      <div class="container1">
+       <div class="section">
+        <div>
+          <img src="/images/edit.png" width="200"  alt="edit" />
+        </div>
+      <div>
+        <h4>Edit Posts</h4>
+        <p>Need to make changes? No problem. With the Edit feature, you can update your existing posts anytime. Whether it's fixing a typo or adding more content, your changes will be reflected immediately.</p>
+        </div>
+       </div>
+      </div>
+
+      <div class="container1">
+        <div class="section">
+         <div>
+          <img src="/images/delete.png" width="100" height="100" alt="delete" />
+         </div>
+       <div>
+         <h4>Delete Posts</h4>
+         <p>Want to remove a post? The Delete button lets you permanently remove any article from your blog. This feature helps keep your content clean, relevant, and up to date.</p>
+        </div>
+       </div>
+     </div>
+  </div> 
+
+<br>
+<br>
+
+<div class="container1">
+    <div class="section1">
+    <h2>Blog Posts</h2>
+  </div>
+</div>
+
+<div class="container1">
+  <% posts.forEach((post, index) => { %>
+    <div class="section1">
+      <div>
+        <h3><%= post.title %></h3>
+        <p><%= post.content.substring(0, 100) %>...</p>
+        <a href="/posts?blogIndex=<%= index %>"><img src="images/chevron.png" width="10" height="10"> Read More..</a> |
+        <a class="btn" href="/edit?index=<%= index %>" style="margin-left: 10px;">Edit</a>
+        <form action="/delete" method="POST" style="display:inline;">
+          <input type="hidden" name="index" value="<%= index %>">
+          <button type="submit" class="btn" style="margin-left: 10px;">Delete</button>
+        </form>
+      </div>
+    </div>
+  <% }) %>
+
+</div>
+<%- include("partials/footer.ejs")%>
